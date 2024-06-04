@@ -20,7 +20,7 @@
 #define SCRL_DOWN MOVE_Y(-U_MOUSE_SCRL_MAX)
 #define SCRL_LEFT MOVE_X(-U_MOUSE_SCRL_MAX)
 #define SCRL_RIGHT MOVE_X(U_MOUSE_SCRL_MAX)
-#define U_MOUSE_MOVE_MAX 1400                     /* <--- New max speed setting (default: 600) */
+#define U_MOUSE_MOVE_MAX 1800                     /* <--- New max speed setting (default: 600) */
 
 #undef MOVE_UP
 #undef MOVE_DOWN
