@@ -68,8 +68,8 @@
 
         SUPER_LAYER {
             bindings = <
-&trans  &mkp MB1       &mmv MOVE_UP        &mkp MB2           &none         &none           &none   &kp BSLH          &kp N7  &kp N8  &kp N9  &kp N0
-&trans  MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT           &mwh SCROLL_DOWN   &mwh SCROLL_UP         &none   &kp ASTERISK      &kp N4  &kp N5  &kp N6  &kp DOT
+&trans  &mkp MB1       &mmv MOVE_UP  &mkp MB2       &none         &none           &none   &kp BSLH          &kp N7  &kp N8  &kp N9  &kp N0
+&trans  MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT &mwh SCROLL_DOWN   &mwh SCROLL_UP &none   &kp ASTERISK      &kp N4  &kp N5  &kp N6  &kp DOT &trans
 &trans  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3    &trans  &insert_home_end  &kp N1  &kp N2  &kp N3  &kp ENTER
                                   &mt ESCAPE DEL  &trans        &none           &none   &trans            &none
             >;
