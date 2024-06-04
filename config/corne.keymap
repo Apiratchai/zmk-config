@@ -15,16 +15,18 @@
 #undef SCRL_DOWN
 #undef SCRL_LEFT
 #undef SCRL_RIGHT
+
 #define SCRL_UP MOVE_Y(U_MOUSE_SCRL_MAX)
 #define SCRL_DOWN MOVE_Y(-U_MOUSE_SCRL_MAX)
 #define SCRL_LEFT MOVE_X(-U_MOUSE_SCRL_MAX)
 #define SCRL_RIGHT MOVE_X(U_MOUSE_SCRL_MAX)
-
 #define U_MOUSE_MOVE_MAX 1400                     /* <--- New max speed setting (default: 600) */
+
 #undef MOVE_UP
 #undef MOVE_DOWN
 #undef MOVE_LEFT
 #undef MOVE_RIGHT
+
 #define MOVE_UP MOVE_Y(-U_MOUSE_MOVE_MAX)
 #define MOVE_DOWN MOVE_Y(U_MOUSE_MOVE_MAX)
 #define MOVE_LEFT MOVE_X(-U_MOUSE_MOVE_MAX)
@@ -57,10 +59,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E         &kp R  &kp T        &kp Y      &kp U  &kp I          &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D         &kp F  &kp G        &kp H      &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C         &kp V  &kp B        &kp N      &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp ENTER
-                         &kp LEFT_ALT  &mo 1  &kp SPACE    &kp SPACE  &mo 2  &kp RIGHT_GUI
+&kp TAB           &kp Q  &kp W  &kp E         &kp R  &kp T        &kp Y      &kp U  &kp I          &kp O    &kp P     &kp BSPC
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D         &kp F  &kp G        &kp H      &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C         &kp V  &kp B        &kp N      &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp ENTER
+                                &kp LEFT_ALT  &mo 1  &kp SPACE    &kp SPACE  &mo 2  &kp RIGHT_GUI
             >;
         };
 
@@ -87,19 +89,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5       &kp N6     &kp N7     &kp N8     &kp N9            &kp N0             &trans
-&trans     &trans  &trans  &trans  &trans  &trans       &trans     &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
-&kp LSHFT  &trans  &trans  &trans  &trans  &trans       &trans     &trans     &trans     &trans            &trans             &kp ENTER
-                           &trans  &mo 3   &kp SPACE    &kp SPACE  &mo 3      &kp RALT
+&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5       &kp N6     &kp N7          &kp N8          &kp N9            &kp N0             &trans
+&trans     &trans  &trans  &trans  &trans  &trans       &trans     &kp MINUS       &kp EQUAL       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
+&kp LSHFT  &trans  &trans  &trans  &trans  &trans       &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW      &kp RIGHT_ARROW    &kp ENTER
+                           &trans  &mo 3   &kp SPACE    &kp SPACE  &mo 3           &kp RALT
             >;
         };
 
         SUPER_LAYER {
             bindings = <
-&trans  &mkp LCLK       &mmv MOVE_UP    &mkp LCLK        &none             &none             &none      &kp N7  &kp N8  &kp N9  &kp N0     &trans
-&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &msc SCRL_UP    &kp SLASH  &kp N4  &kp N5  &kp N6  &kp MINUS  &kp PERIOD
-&trans  &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2      &bt BT_SEL 3      &kp ASTRK  &kp N1  &kp N2  &kp N3  &kp PLUS   &kp ENTER
-                                        &mt ESCAPE DEL   &trans            &none             &none      &trans  &none
+&trans  &mkp LCLK       &mmv MOVE_UP    &mkp LCLK        &none           &none           &none            &kp KP_NUMBER_7      &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans
+&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &msc SCRL_UP    &kp KP_DIVIDE    &kp KP_NUMBER_4      &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS     &kp PERIOD
+&trans  &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2    &bt BT_SEL 3    &kp KP_MULTIPLY  &kp LA(KP_NUMBER_1)  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp ENTER
+                                        &mt ESCAPE DEL   &trans          &none           &none            &trans               &none
             >;
         };
     };
