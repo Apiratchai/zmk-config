@@ -31,6 +31,10 @@
 #define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
 
 
+#include <zmk/behavior/tap_dance.h> // Add this line
+#include <zmk/behavior/mouse_move.h> // Add this line
+#include <zmk/behavior/mouse_scroll.h> // Add this line
+
 / {
     behaviors {
         insert_home_end: insert_home_end {
