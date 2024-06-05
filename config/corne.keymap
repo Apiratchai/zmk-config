@@ -38,7 +38,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "INSERT_HOME_END";
             #binding-cells = <0>;
-            bindings = <&kp HOME>, <&kp END>, <&none>;
+            bindings = <&kp HOME>, <&kp END>, <&kp LS(INSERT)>;
         };
 
         mouse_move { time-to-max-speed-ms = <300>; };
