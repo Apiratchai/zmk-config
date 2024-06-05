@@ -41,7 +41,7 @@
             bindings = <&kp HOME>, <&kp END>, <&kp INSERT>;
         };
 
-        mouse_move { time-to-max-speed-ms = <0>; };
+        mouse_move { time-to-max-speed-ms = <300>; };
 
         mouse_scroll { time-to-max-speed-ms = <400>; };
     };
