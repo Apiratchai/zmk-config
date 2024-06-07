@@ -39,6 +39,8 @@
             label = "INSERT_HOME_END";
             #binding-cells = <0>;
             bindings = <&kp HOME>, <&kp END>, <&kp LS(INSERT)>;
+
+            tapping-term-ms = <300>;
         };
 
         BT0: BT0 {
@@ -46,6 +48,8 @@
             label = "BT0";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 0>, <&none>, <&bt BT_DISC 0>;
+
+            tapping-term-ms = <400>;
         };
 
         BT1: BT1 {
@@ -53,6 +57,8 @@
             label = "BT1";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 1>, <&none>, <&bt BT_DISC 1>;
+
+            tapping-term-ms = <400>;
         };
 
         BT2: BT2 {
@@ -60,6 +66,8 @@
             label = "BT2";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 2>, <&none>, <&bt BT_DISC 2>;
+
+            tapping-term-ms = <400>;
         };
 
         mouse_move { time-to-max-speed-ms = <300>; };
@@ -117,10 +125,10 @@
 
         SUPER_LAYER {
             bindings = <
-&trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_LEFT  &msc SCRL_RIGHT &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8   &kp KP_NUMBER_9  &kp KP_NUMBER_0  &mt DEL BACKSPACE
-&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &msc SCRL_UP    &kp KP_DIVIDE    &kp KP_NUMBER_4  &kp KP_NUMBER_5   &kp KP_NUMBER_6  &kp KP_MINUS     &kp KP_DOT
-&trans  &bt BT_CLR      &mkp MCLK       &BT0             &BT1            &BT2            &kp KP_MULTIPLY  &kp KP_NUMBER_1  &kp KP_NUMBER_2   &kp KP_NUMBER_3  &kp KP_PLUS      &kp ENTER
-                                        &kp ESC          &trans          &none           &none            &trans           &insert_home_end
+&trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_LEFT  &msc SCRL_RIGHT    &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8   &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp BACKSPACE
+&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &msc SCRL_UP       &kp KP_DIVIDE    &kp KP_NUMBER_4  &kp KP_NUMBER_5   &kp KP_NUMBER_6  &kp KP_MINUS     &kp KP_DOT
+&trans  &bt BT_CLR      &mkp MCLK       &BT0             &BT1            &BT2               &kp KP_MULTIPLY  &kp KP_NUMBER_1  &kp KP_NUMBER_2   &kp KP_NUMBER_3  &kp KP_PLUS      &kp ENTER
+                                        &mt DEL ESC      &trans          &none              &none            &trans           &insert_home_end
             >;
         };
     };
