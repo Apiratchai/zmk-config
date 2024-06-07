@@ -92,7 +92,7 @@
                                 &kp LEFT_ALT  &mo 1  &kp SPACE    &kp SPACE  &mo 2  &kp RIGHT_GUI
             >;
             // part for EC11 encoder
-            sensor-binding = <&inc_dec_kp C_AL_NEXT_TASK C_AL_PREVIOUS_TASK>;
+            sensor-bindings = <&inc_dec_kp C_AL_NEXT_TASK C_AL_PREVIOUS_TASK>;
         };
 
         raise_layer {
@@ -123,7 +123,7 @@
 &kp LSHFT         &kp F7  &kp F8  &kp F9  &kp F10  &kp F11      &kp F12    &kp LEFT_ARROW  &kp DOWN_ARROW    &kp UP_ARROW      &kp RIGHT_ARROW    &kp ENTER
                           &none   &trans  &mo 3    &kp SPACE    &kp SPACE  &mo 3           &insert_home_end  &none
             >;
-            sensor-binding = <&inc_dec_kp C_AL_NEXT_TASK C_AL_PREVIOUS_TASK>;
+            sensor-bindings = <&inc_dec_kp C_AL_NEXT_TASK C_AL_PREVIOUS_TASK>;
         };
 
         SUPER_LAYER {
