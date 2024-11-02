@@ -70,9 +70,27 @@
             tapping-term-ms = <400>;
         };
 
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 3>;
+
+            tapping-term-ms = <300>;
+        };
+
         mouse_move { time-to-max-speed-ms = <300>; };
 
         mouse_scroll { time-to-max-speed-ms = <400>; };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        hold_toggle_combo {
+            bindings = <&new_behavior>;
+            key-positions = <37 40>;
+        };
     };
 
     keymap {
