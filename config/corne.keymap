@@ -90,6 +90,7 @@
         hold_toggle_combo {
             bindings = <&new_behavior>;
             key-positions = <37 40>;
+            layers = <3>;
         };
     };
 
