@@ -89,7 +89,7 @@
         compatible = "zmk,combos";
 
         hold_toggle_combo {
-            bindings = <&none>;
+            bindings = <&hold_tap_mo_tog 3 3>;
             key-positions = <37 40>;
             layers = <3>;
         };
@@ -145,10 +145,10 @@
 
         SUPER_LAYER {
             bindings = <
-&trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_LEFT        &msc SCRL_RIGHT    &none            &kp KP_NUMBER_7       &kp KP_NUMBER_8   &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp BACKSPACE
-&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN        &msc SCRL_UP       &kp KP_DIVIDE    &kp KP_NUMBER_4       &kp KP_NUMBER_5   &kp KP_NUMBER_6  &kp KP_MINUS     &kp KP_DOT
-&trans  &bt BT_CLR      &mkp MCLK       &BT0             &BT1                  &BT2               &kp KP_MULTIPLY  &kp KP_NUMBER_1       &kp KP_NUMBER_2   &kp KP_NUMBER_3  &kp KP_PLUS      &kp ENTER
-                                        &mt DEL ESC      &hold_tap_mo_tog 3 3  &none              &none            &hold_tap_mo_tog 3 3  &insert_home_end
+&trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_LEFT  &msc SCRL_RIGHT    &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8   &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp BACKSPACE
+&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &msc SCRL_UP       &kp KP_DIVIDE    &kp KP_NUMBER_4  &kp KP_NUMBER_5   &kp KP_NUMBER_6  &kp KP_MINUS     &kp KP_DOT
+&trans  &bt BT_CLR      &mkp MCLK       &BT0             &BT1            &BT2               &kp KP_MULTIPLY  &kp KP_NUMBER_1  &kp KP_NUMBER_2   &kp KP_NUMBER_3  &kp KP_PLUS      &kp ENTER
+                                        &mt DEL ESC      &trans          &none              &none            &trans           &insert_home_end
             >;
         };
     };
