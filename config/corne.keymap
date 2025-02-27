@@ -8,7 +8,9 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define U_MOUSE_SCRL_MAX 30                  /* <--- New max speed setting (default: 10) */
 
@@ -71,18 +73,6 @@
             tapping-term-ms = <400>;
         };
 
-        click_layer: click_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "CLICK_LAYER";
-            bindings = <&mo>, <&mkp>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <40>;
-            tapping-term-ms = <50>;
-            hold-while-undecided;
-            hold-while-undecided-linger;
-        };
-
         mouse_move { time-to-max-speed-ms = <300>; };
 
         mouse_scroll { time-to-max-speed-ms = <400>; };
@@ -109,10 +99,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E         &kp R  &kp T        &kp Y      &kp U                &kp I          &kp O    &kp P     &kp BSPC
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D         &kp F  &kp G        &kp H      &kp J                &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C         &kp V  &kp B        &kp N      &kp M                &kp COMMA      &kp DOT  &kp FSLH  &kp ENTER
-                                &kp LEFT_ALT  &mo 1  &kp SPACE    &mkp LCLK  &click_layer 2 RCLK  &kp RIGHT_GUI
+&kp TAB           &kp Q  &kp W  &kp E         &kp R  &kp T        &kp Y      &kp U  &kp I          &kp O    &kp P     &kp BSPC
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D         &kp F  &kp G        &kp H      &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C         &kp V  &kp B        &kp N      &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp ENTER
+                                &kp LEFT_ALT  &mo 1  &kp SPACE    &mkp LCLK  &mo 2  &kp RIGHT_GUI
             >;
         };
 
